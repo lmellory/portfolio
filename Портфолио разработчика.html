@@ -1,0 +1,142 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Портфолио разработчика</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Manrope:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: one narrow column, big name on top, two project cards, then contacts. */
+:root{
+  --bg:#f6f3ee; --surface:#ffffff; --fg:#17130f; --muted:#6b625a; --line:#e4ddd3;
+  --accent:#e85d04; --accent-ink:#ffffff;
+  --display:"Unbounded",system-ui,sans-serif; --body:"Manrope",system-ui,-apple-system,sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#110e0b; --surface:#1b1713; --fg:#f5efe7; --muted:#a39a90; --line:#2e2822;
+    --accent:#ff7a1a; --accent-ink:#130e0a; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#110e0b; --surface:#1b1713; --fg:#f5efe7; --muted:#a39a90; --line:#2e2822;
+  --accent:#ff7a1a; --accent-ink:#130e0a; color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.6;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
+  padding-block:24px}
+.wrap{max-width:880px;margin:0 auto;display:grid;gap:56px}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);line-height:1.15;text-wrap:balance;margin:0}
+.label{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600}
+
+/* hero */
+.hero{display:grid;gap:22px;padding-top:24px}
+.hero h1{font-size:clamp(34px,8vw,64px);font-weight:700;letter-spacing:-.02em}
+.hero h1 span{color:var(--accent)}
+.hero p{margin:0;max-width:56ch;color:var(--muted);font-size:18px}
+.actions{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 20px;border-radius:999px;text-decoration:none;font-weight:600;border:1px solid var(--line);background:var(--surface)}
+.btn.primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.btn:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+
+/* sections */
+section{display:grid;gap:22px}
+section h2{font-size:clamp(22px,4.5vw,30px);font-weight:700}
+
+/* project cards */
+.cards{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr))}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:26px;display:grid;gap:16px;align-content:start;min-width:0}
+.card h3{font-size:22px;font-weight:700}
+.card p{margin:0;color:var(--muted)}
+.card ul{margin:0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+.card li{font-size:13px;padding:5px 11px;border:1px solid var(--line);border-radius:999px;color:var(--muted)}
+.card .links{display:flex;flex-wrap:wrap;gap:10px;margin-top:4px}
+.card .links a{font-weight:600;color:var(--accent);text-decoration:none;border-bottom:1px solid currentColor}
+
+/* list of capabilities */
+.facts{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr))}
+.fact{border-top:2px solid var(--accent);padding-top:14px}
+.fact strong{display:block;font-family:var(--display);font-size:20px;margin-bottom:4px}
+.fact span{color:var(--muted);font-size:15px}
+
+/* contact */
+.contact{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:28px;display:grid;gap:14px}
+.contact p{margin:0;color:var(--muted)}
+footer{color:var(--muted);font-size:14px;padding-bottom:12px}
+@media (prefers-reduced-motion: no-preference){
+  .hero>*{animation:rise .6s ease both}
+  .hero>*:nth-child(2){animation-delay:.08s}.hero>*:nth-child(3){animation-delay:.16s}
+  @keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+}
+</style>
+</head>
+<body>
+<main class="wrap">
+
+  <header class="hero">
+    <span class="label">Разработчик Telegram Mini App</span>
+    <h1>Ежедневники, которые <span>открываются прямо в Telegram</span></h1>
+    <p>Делаю рабочие инструменты для мастеров и тренеров: расписание, клиенты, доходы и бот-напоминания на облачной инфраструктуре. Ничего устанавливать не нужно.</p>
+    <div class="actions">
+      <a class="btn primary" href="https://t.me/squzzyy23" target="_blank" rel="noopener">Написать в Telegram</a>
+      <a class="btn" href="https://github.com/lmellory" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </header>
+
+  <section aria-labelledby="projects">
+    <span class="label">Проекты</span>
+    <h2 id="projects">Что уже работает</h2>
+    <div class="cards">
+      <article class="card">
+        <h3>Gym Planner</h3>
+        <p>Ежедневник тренера в тренажёрном зале: запись на занятия, свободные окна, база клиентов с абонементами, доходы и расходы, вечернее расписание и резервные копии от бота.</p>
+        <ul>
+          <li>Cloudflare Workers</li><li>TypeScript</li><li>Hono</li><li>Turso</li><li>Vanilla JS</li><li>Vitest</li><li>GitHub Actions</li>
+        </ul>
+        <div class="links">
+          <a href="https://github.com/lmellory/gym-planner" target="_blank" rel="noopener">Исходный код</a>
+        </div>
+      </article>
+      <article class="card">
+        <h3>Nail Planner</h3>
+        <p>Ежедневник мастера маникюра: записи клиенток с услугами и длительностью, заметки о предпочтениях и аллергиях, дни рождения, траты на материалы и экспорт в CSV.</p>
+        <ul>
+          <li>Cloudflare Workers</li><li>TypeScript</li><li>Hono</li><li>Turso</li><li>Vanilla JS</li><li>Vitest</li>
+        </ul>
+        <div class="links">
+          <a href="https://github.com/lmellory/nail-planner" target="_blank" rel="noopener">Исходный код</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section aria-labelledby="how">
+    <span class="label">Как работаю</span>
+    <h2 id="how">Что важно в продукте</h2>
+    <div class="facts">
+      <div class="fact"><strong>Без установки</strong><span>Открывается внутри Telegram, вход по аккаунту без паролей. Подпись Telegram проверяется на сервере.</span></div>
+      <div class="fact"><strong>Данные не теряются</strong><span>Еженедельная резервная копия от бота и восстановление одной транзакцией: при ошибке старые данные остаются целыми.</span></div>
+      <div class="fact"><strong>Проверка перед выкладкой</strong><span>Проверка типов и тесты (более 270 в Gym Planner) запускаются в GitHub Actions до каждого деплоя.</span></div>
+      <div class="fact"><strong>Под вас</strong><span>Виды занятий, цены, рабочие дни, часовой пояс и приветствие настраиваются без программирования.</span></div>
+    </div>
+  </section>
+
+  <section class="contact" aria-labelledby="contact">
+    <span class="label">Контакты</span>
+    <h2 id="contact">Обсудим ваш проект</h2>
+    <p>Напишите в Telegram: отвечу, расскажу, что можно сделать, и назову сроки и стоимость. Запуск обычно занимает 3–5 рабочих дней.</p>
+    <div class="actions">
+      <a class="btn primary" href="https://t.me/squzzyy23" target="_blank" rel="noopener">@squzzyy23</a>
+    </div>
+  </section>
+
+  <footer>© lmellory · Telegram Mini App · Cloudflare Workers</footer>
+</main>
+</body>
+</html>
+
+</body></html>
